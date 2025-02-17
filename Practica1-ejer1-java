@@ -13,15 +13,6 @@ public class Punto {
         this.y = y;
     }
 
-    // Getter para x
-    public double getX() {
-        return x;
-    }
-
-    // Getter para y
-    public double getY() {
-        return y;
-    }
 
     // Coordenadas cartesianas
     public String coordCartesianas() {
