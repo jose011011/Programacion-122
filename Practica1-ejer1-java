@@ -1,0 +1,51 @@
+public class Punto {
+    private double x;
+    private double y;
+
+    // Constructor por defecto
+    public Punto() {
+        this(0, 0);
+    }
+
+    // Constructor con parámetros
+    public Punto(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // Getter para x
+    public double getX() {
+        return x;
+    }
+
+    // Getter para y
+    public double getY() {
+        return y;
+    }
+
+    // Coordenadas cartesianas
+    public String coordCartesianas() {
+        return "(" + x + ", " + y + ")";
+    }
+
+    // Coordenadas polares
+    public String coordPolares() {
+        double r = Math.sqrt(x * x + y * y); // Distancia radial
+        double theta = Math.atan2(y, x);    // Ángulo en radianes
+        return "(" + r + ", " + theta + ")";
+    }
+
+    // Representación en cadena
+    @Override
+    public String toString() {
+        return "Punto(" + x + ", " + y + ")";
+    }
+
+    // Prueba de escritorio
+    public static void main(String[] args) {
+        Punto p = new Punto(3, 4);
+        System.out.println(p.toString()); // Imprime la representación en cadena
+        System.out.println("Coordenadas Cartesianas: " + p.coordCartesianas());
+        System.out.println("Coordenadas Polares: " + p.coordPolares());
+    }
+}
